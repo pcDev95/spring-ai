@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "maven: clean install",
+            "type": "shell",
+            "command": "./mvnw clean install",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Maven clean install using wrapper"
+        },
+        {
+            "label": "maven: clean install (skip tests)",
+            "type": "shell",
+            "command": "./mvnw clean install -DskipTests",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Maven clean install skipping tests"
+        },
+        {
+            "label": "maven: clean",
+            "type": "shell",
+            "command": "./mvnw clean",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Maven clean"
+        },
+        {
+            "label": "maven: test",
+            "type": "shell",
+            "command": "./mvnw test",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Run Maven tests"
+        }
+    ]
+}
