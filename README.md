@@ -53,6 +53,13 @@ Returns the full `ChatResponse` object containing metadata (usage, model info, e
 http POST :8080/chat/chat-response message="What is the capital of France?"
 ```
 
+### 4. Currency Bot
+Returns the currency and exchange rate for the given country.
+
+```bash
+http POST :8080/currency/find-curr-exchange-rate country="India"
+```
+
 ## 📝 Configuration
 
 The model is configured in `src/main/resources/application.properties`:
