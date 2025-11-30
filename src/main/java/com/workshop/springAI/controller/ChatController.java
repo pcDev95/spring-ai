@@ -22,7 +22,7 @@ public class ChatController {
 
     @PostMapping("/chat-static")
     public String chatStatic(@RequestBody String message) {
-        log.info("/chat-static is invoked with message: " + message);
+        log.info("/chat-static is invoked with message: {}", message);
         return chatClient.prompt()
                 .user(message)
                 .call()
@@ -31,7 +31,7 @@ public class ChatController {
 
     @PostMapping(value = "/chat-stream")
     public Flux<String> chatStream(@RequestBody String message) {
-        log.info("/chat-stream is invoked with message: " + message);
+        log.info("/chat-stream is invoked with message: {}", message);
         return chatClient.prompt()
                 .user(message)
                 .stream()
@@ -40,7 +40,7 @@ public class ChatController {
 
     @PostMapping(value = "/chat-response")
     public ChatResponse chatResponse(@RequestBody String message) {
-        log.info("/chat-response is invoked with message: " + message);
+        log.info("/chat-response is invoked with message: {}", message);
         return chatClient.prompt()
                 .user(message)
                 .call()
