@@ -18,7 +18,7 @@ import reactor.core.publisher.Flux;
 public class ChatController {
     private final ChatClient chatClient;
 
-    @PostMapping("/chat-static")
+    @PostMapping("/static")
     public String chatStatic(@RequestBody String message) {
         log.info("/chat-static is invoked with message: {}", message);
         return chatClient.prompt()
@@ -27,7 +27,7 @@ public class ChatController {
                 .content();
     }
 
-    @PostMapping(value = "/chat-stream")
+    @PostMapping(value = "/stream")
     public Flux<String> chatStream(@RequestBody String message) {
         log.info("/chat-stream is invoked with message: {}", message);
         return chatClient.prompt()
@@ -36,7 +36,7 @@ public class ChatController {
                 .content();
     }
 
-    @PostMapping(value = "/chat-response")
+    @PostMapping(value = "/esponse")
     public ChatResponse chatResponse(@RequestBody String message) {
         log.info("/chat-response is invoked with message: {}", message);
         return chatClient.prompt()
