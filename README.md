@@ -11,7 +11,7 @@ A Spring Boot application demonstrating Spring AI capabilities with Google Gemin
 
 ## 🚀 Prerequisites
 
-- Java 25 installed 
+- Java 25 installed
 - Google Gemini API Key
 - [HTTPie](https://httpie.io/) (optional, for testing)
 
