@@ -36,7 +36,7 @@ public class ChatController {
                 .content();
     }
 
-    @PostMapping(value = "/esponse")
+    @PostMapping(value = "/response")
     public ChatResponse chatResponse(@RequestBody String message) {
         log.info("/chat-response is invoked with message: {}", message);
         return chatClient.prompt()

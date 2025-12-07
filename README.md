@@ -27,7 +27,12 @@ A Spring Boot application demonstrating Spring AI capabilities with Google Gemin
     ```bash
     ./mvnw spring-boot:run
     ```
+## Docker image creation
+    docker build -t <image name>:<tag name> <path>  
 
+## Docker container run
+    docker run -p 8080:<container-port> -e GEMINI_API_KEY=<your gemini api key> <image name>:<tag name>
+    
 ## 🧪 Testing Endpoints
 
 Here are the HTTPie commands to test the available endpoints:
@@ -63,6 +68,7 @@ http POST :8080/currency/find-curr-exchange-rate country="India"
 ## 📝 Configuration
 
 The model is configured in `src/main/resources/application.properties`:
+
 
 ```properties
 spring.ai.google.genai.api-key=${GEMINI_API_KEY}
